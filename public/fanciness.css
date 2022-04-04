@@ -1,0 +1,296 @@
+body {
+  font-size: 16px;
+  font-family: 'sans-serif';
+  background-color: #EFEFEF;
+  max-width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  position: fixed;
+  height: 50px;
+  width: 75%;
+  min-width: 550px;
+  max-width: 75%;
+  z-index: 1;
+  font-size: 24px;
+  background-color: #FCFCFC;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.site_name {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.current_city {
+  text-align: right;
+}
+
+.header_buttons {
+  background-color: rgba(0, 0, 0, 0);
+  margin: 10px;
+  cursor: default;
+}
+
+.search_button {
+  cursor: pointer;
+}
+
+.dropdown_main {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  margin-top: 49px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #FCFCFC;
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.dropdown_main:hover .dropdown {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.dropdown_main:focus-within .dropdown {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.favourite_dropdown {
+  width: max-content;
+}
+
+.current_city_fav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fav_city {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.fav_btns {
+  margin-left: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.city_change_from_fav {
+  cursor: pointer;
+}
+
+.settings_dropdown {
+  width: 180px;
+}
+
+.settings_margin {
+  border: 0px;
+}
+
+.select_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings_select {
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 50px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.temp_select:hover {
+  background: #80008050 !important;
+}
+
+.wind_select:hover {
+  background: #19C80050 !important;
+}
+
+.pres_select:hover {
+  background: #80000050 !important;
+}
+
+.celsium_btn {
+  background: #80008050;
+}
+
+.ms_btn {
+  background: #19C80050;
+}
+
+.mmhg_btn {
+  background: #80000050;
+}
+
+.login_dropdown > label, input {
+  margin-bottom: 10px;
+}
+
+.user_dropdown > div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.user_dropdown {
+  width: 200px;
+}
+
+.panels {
+  background-color: #FCFCFC;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+  min-height: 120px;
+  width: 100%;
+  min-width: 550px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+.current_city2 {
+  display: none;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: -5px;
+  word-wrap: break-word;
+}
+
+.current_weather {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.current_weather_vision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 130px;
+}
+
+.weather_icon {
+  font-size: 80px;
+  height: 80px;
+  margin: 10px;
+}
+
+.weather_condition {
+	text-align: center;
+  margin: 10px;
+}
+
+.current_weather_info {
+  flex-grow: 1;
+  align-self: stretch;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.weather_text {
+  display: inherit;
+  align-items: center;
+  width: max-content;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.weather_text_big {
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.main_meteogram {
+  height: 400px;
+}
+
+#weather_chart {
+  margin: 10px;
+}
+
+@media (max-width: 590px) {
+
+  body {
+    font-size: 14px;
+    max-width: 95%;
+  }
+
+  header {
+    width: 95%;
+    max-width: 95%;
+    min-width: 0px;
+  }
+
+  .dropdown {
+    right: 0;
+    width: fit-content;
+  }
+
+  .current_city {
+    display: none;
+  }
+
+  .header_buttons {
+    font-size: 24px;
+  }
+
+  .panels {
+    min-width: 0px;
+  }
+
+  .current_city2 {
+    display: block;
+    margin-bottom: 0px;
+  }
+
+  .weather_icon {
+    font-size: 70px;
+    height: 70px;
+  }
+
+  .weather_text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .main_meteogram {
+    height: 300px;
+  }
+
+  #weather_chart {
+    margin: 10px;
+  }
+
+}
+
+@media (max-width: 350px) {
+
+  .site_name {
+    display: none;
+  }
+
+  .logo {
+    flex-grow: 1;
+  }
+
+}

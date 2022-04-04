@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Погода</title>
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" x="-.06em" font-size="90">⛅️</text></svg>' />
+  <link href="fanciness.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header_buttons logo">⛅</div>
+    <div class="site_name">Погода</div>
+    <div class="current_city">und</div>
+    <div class="header_buttons search_button">🔍</div>
+    <div class="dropdown_main">
+      <div class="header_buttons favourite_button">⭐</div>
+      <div class="dropdown favourite_dropdown">
+        <div class="current_city_fav">
+          <span>und</span> <button class="add_fav_btn fav_btns">⭐</button>
+        </div>
+        <div class="fav_cities">
+          
+        </div>
+      </div>
+    </div>
+    <div class="dropdown_main">
+      <div class="header_buttons settings_button">⚙️</div>
+      <div class="dropdown settings_dropdown">
+        <div>
+          Температура:<hr class="settings_margin"><span class="select_buttons"><button class="settings_select temp_select celsium_btn">°С</button><button class="settings_select temp_select fahrenheit_btn">°F</button><button class="settings_select temp_select kelvin_btn">K</button></span>
+        </div><hr class="settings_margin">
+        <div>
+          Сила ветра:<hr class="settings_margin"><span class="select_buttons"><button class="settings_select wind_select ms_btn">м/с</button><button class="settings_select wind_select kmh_btn">км/ч</button><button class="settings_select wind_select kt_btn">узлы</button></span>
+        </div><hr class="settings_margin">
+        <div>
+          Давление:<hr class="settings_margin"><span class="select_buttons"><button class="settings_select pres_select mmhg_btn">мм рт. ст</button><button class="settings_select pres_select hpa_btn">гПа</button><button class="settings_select pres_select inhg_btn">дюйм рт. ст.</button></span>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown_main">
+      <div class="header_buttons login_button">🔑</div>
+      <div class="dropdown login_dropdown">
+        <label for="uname">Логин</label>
+        <input type="text" placeholder="Введите логин" name="uname" required>
+        <label for="psw">Пароль</label>
+        <input type="password" placeholder="Введите пароль" name="pwd" required>
+        <div style="display: flex; align-items: center;">
+          <button class="login_btn">Войти</button>
+          <a class="reg_link" href="javascript:;" style="margin-left: 10px; flex-grow: 1; text-align: right;">Регистрация</a>
+        </div>
+      </div>
+      <div class="dropdown user_dropdown" style="display: none !important;">
+        Идентификатор пользователя:
+        <div class="userid">und</div>
+        Имя пользователя:
+        <div class="username">und</div>
+        <button style="display: flex; align-items: center;" class="logout_btn">Выйти из учётной записи</button>
+      </div>
+    </div>
+  </header>
+  <div class="panels" style="margin-top: 100px;">
+    <div class="current_city2">und</div>
+    <div class="current_weather">
+      <div class="current_weather_vision">
+        <div class="weather_icon">⛅</div>
+        <div class="weather_condition">und</div>
+      </div>
+      <div class="current_weather_info">
+        <div class="weather_text">
+          Температура: <a class="weather_text_big"><span class="weather_temperature">und</span>°С</a>
+        </div>
+        <div class="weather_text">
+          Сила ветра: <a class="weather_text_big"><span class="weather_wind">und</span> м/с</a>
+        </div>
+        <div class="weather_text">
+          Осадки за час: <a class="weather_text_big"><span class="weather_precipitation">und</span> мм</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panels main_meteogram">
+    <canvas id="weather_chart"></canvas>
+  </div>
+  <footer>
+    <a href=https://openweathermap.org>Источник данных: OpenWeather®</a>
+  </footer>
+  <script src="chart.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
